@@ -1,0 +1,4 @@
+user=agencia_viagem
+password=senha159357
+dburl=jdbc:mysql://localhost:3306/HH
+useSSL=false
