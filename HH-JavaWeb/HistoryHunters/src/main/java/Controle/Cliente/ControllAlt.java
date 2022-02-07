@@ -13,16 +13,16 @@ import Model.Persistencia.DAOCliente;
 import Model.User.Cliente;
 
 /**
- * Servlet implementation class ControllerConsult
+ * Servlet implementation class ControllAlt
  */
-@WebServlet("/Client1")
-public class ControllerConsult extends HttpServlet {
+@WebServlet("/ControllerCliente")
+public class ControllAlt extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ControllerConsult() {
+    public ControllAlt() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -36,13 +36,15 @@ public class ControllerConsult extends HttpServlet {
 		DAOCliente daoClient = new DAOCliente();
 		
 		Cliente cl = new Cliente();
+		cl.setNome(request.getParameter("textNome"));
 		cl.setEmail(request.getParameter("textEmail"));
+		cl.setTelefone(request.getParameter("textCelular"));
+		cl.setContEmergencia(request.getParameter("textCE"));
 		cl.setSenha(request.getParameter("senha"));
-		daoClient.Consultar(cl);
 		
-		request.setAttribute("cl", cl);
+		daoClient.Alterar(cl);
 		
-		exit = request.getRequestDispatcher("Logado.jsp");
+		exit = request.getRequestDispatcher("Success.jsp");
 		exit.forward(request, response);
 		}
 		catch(Exception e) {

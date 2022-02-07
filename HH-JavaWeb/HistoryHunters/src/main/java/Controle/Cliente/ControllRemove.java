@@ -13,16 +13,16 @@ import Model.Persistencia.DAOCliente;
 import Model.User.Cliente;
 
 /**
- * Servlet implementation class ControllerConsult
+ * Servlet implementation class ControllRemove
  */
-@WebServlet("/Client1")
-public class ControllerConsult extends HttpServlet {
+@WebServlet("/ControllerClientRemove")
+public class ControllRemove extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ControllerConsult() {
+    public ControllRemove() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -33,17 +33,18 @@ public class ControllerConsult extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		RequestDispatcher exit = null;
 		try {
+		
 		DAOCliente daoClient = new DAOCliente();
 		
-		Cliente cl = new Cliente();
-		cl.setEmail(request.getParameter("textEmail"));
-		cl.setSenha(request.getParameter("senha"));
-		daoClient.Consultar(cl);
+			Cliente cl = new Cliente();
+			cl.setEmail(request.getParameter("textEmail"));
+			cl.setSenha(request.getParameter("senha"));
 		
-		request.setAttribute("cl", cl);
+			daoClient.Excluir(cl);
 		
-		exit = request.getRequestDispatcher("Logado.jsp");
-		exit.forward(request, response);
+			exit = request.getRequestDispatcher("Success.jsp");
+		
+			exit.forward(request, response);
 		}
 		catch(Exception e) {
 			e.printStackTrace();

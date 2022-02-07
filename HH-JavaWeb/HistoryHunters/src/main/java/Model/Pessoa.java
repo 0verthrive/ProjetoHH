@@ -3,6 +3,7 @@ package Model;
 import Model.User.Cliente;
 
 public abstract class Pessoa extends Endereco{
+	private Integer id;
 	private String nome;
 	private String email;
 	private String CPF;
@@ -31,6 +32,14 @@ public abstract class Pessoa extends Endereco{
 		this.CPF = cpf;
 	}
 	
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
 	public Cliente Contato(String telefone, String ContEmergencia) {
 		return null;
 	}

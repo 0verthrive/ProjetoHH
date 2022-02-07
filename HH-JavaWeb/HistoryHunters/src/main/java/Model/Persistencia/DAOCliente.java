@@ -3,6 +3,7 @@ package Model.Persistencia;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 import Model.User.Cliente;
 
@@ -54,11 +55,68 @@ public class DAOCliente {
 		}
 	}
 	
-	public Cliente Consultar(Cliente cliente) {
-		return null;
+	public Cliente Consultar (Cliente cliente) {
+		final String Consultar = "SELECT * FROM Pessoa WHERE Email = ? && Senha = ?";
+
+		try {
+		conn = DriverManager.getConnection(url, user, password);
+		ps = conn.prepareStatement(Consultar);
+		ps.setString(1, cliente.getEmail());
+		ps.setString(2, cliente.getSenha());
+	
+		ResultSet rs = ps.executeQuery();
+		
+		while(rs.next()) {
+			cliente.setId(rs.getInt("idPessoa"));
+			cliente.setNome(rs.getString("Nome"));
+			cliente.setCpf(rs.getString("CPF"));
+			cliente.setEmail(rs.getString("Email"));
+			cliente.setTelefone(rs.getString("Telefone"));
+			cliente.setContEmergencia(rs.getString("ContEmergencia"));
+			cliente.setSenha(rs.getString("Senha"));
+		}
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		return cliente;
+	}
+	public void Alterar(Cliente cliente) {
+		final String alter = "UPDATE Pessoa SET Nome=?, Telefone=?, ContEmergencia=? WHERE Email=? && Senha=? ";
+
+		try {
+		conn = DriverManager.getConnection(url, user, password);
+		ps = conn.prepareStatement(alter);
+		ps.setString(1, cliente.getNome());
+		ps.setString(4, cliente.getEmail());
+		ps.setString(2, cliente.getTelefone());
+		ps.setString(3, cliente.getContEmergencia());
+		ps.setString(5, cliente.getSenha());
+		
+		ps.executeUpdate();
+		
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
-	public void Alterar(Cliente cliente) {}
-	
-	public void Excluir(Cliente cliente) {}
-}
+	public void Excluir(Cliente cliente) {
+		final String remocao = "DELETE FROM Pessoa WHERE Email=? && Senha=?";
+		try {
+			
+		conn = DriverManager.getConnection(url, user, password);
+		ps = conn.prepareStatement(remocao);
+		ps.setString(1, cliente.getEmail());
+		ps.setString(2, cliente.getSenha());
+		
+		ps.executeUpdate();
+		
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+		}
