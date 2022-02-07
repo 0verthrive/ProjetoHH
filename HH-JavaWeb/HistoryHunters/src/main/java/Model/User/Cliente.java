@@ -3,7 +3,7 @@ package Model.User;
 import Model.Pessoa;
 
 public class Cliente extends Pessoa {
-	private String telefone, ContEmergencia;
+	private String telefone, ContEmergencia, Senha;
 
 	public Cliente() {}
 	
@@ -21,6 +21,14 @@ public class Cliente extends Pessoa {
 
 	public void setContEmergencia(String contEmergencia) {
 		ContEmergencia = contEmergencia;
+	}
+
+	public String getSenha() {
+		return Senha;
+	}
+
+	public void setSenha(String senha) {
+		Senha = senha;
 	}
 	
 }

@@ -13,26 +13,34 @@
 <body class="text-center">
 	<div class="container">
 		<main class="form-signin">
-			<form>
+			<form action="Client" method="post">
 				<h1 class="h3 mb-3 fw-normal">Cadastro</h1>
 				<div class="form-floating">
-				<input type="text" class="form-control" id="floatingNome">
+				<input type="text" class="form-control" name="textNome" id="floatingNome">
 				<label for="floatingInput">Nome</label>
 				</div>
 				<div class="form-floating">
-				<input type="text" class="form-control" id="floatingCPF" placeholder="xxx.xxx.xxx/xx">
+				<input type="text" class="form-control" id="floatingCPF" name="textCPF" placeholder="xxx.xxx.xxx/xx">
 				<label for="floatingInput">CPF</label>
 				</div>
 				<div class="form-floating">
-				<input type="email" class="form-control" id="floatingInput" placeholder="exemplo@email.com">
+				<input type="email" class="form-control" id="floatingInput" name="textEmail" placeholder="exemplo@email.com">
 				<label for="floatingInput">Email</label>
 				</div>
 				<div class="form-floating">
-				<input type="password" class="form-control" id="floatingPassword" placeholder="exemplo@email.com">
+				<input type="text" class="form-control" id="floatingCelular" name="textCelular" placeholder="(xx)x.xxxx-xxxx">
+				<label for="floatingInput">Celular</label>
+				</div>
+				<div class="form-floating">
+				<input type="text" class="form-control" id="floatingCE" name="textCE" placeholder="(xx)x.xxxx-xxxx">
+				<label for="floatingInput">Contato de emergência</label>
+				</div>
+				<div class="form-floating">
+				<input type="password" class="form-control" id="floatingPassword" name="senha" placeholder="exemplo@email.com">
 				<label for="floatingPassword">Senha</label>
 				</div>
 				<div>
-				<a class="btn btn-default" href="./PaginaLogin.jsp">voltar</a>
+				<a class="btn btn-default" href="PaginaLogin.jsp">voltar</a>
 				</div>
 				<button class="w-100 btn btn-lg btn-primary" type="submit">Registrar</button>
 				<p class="mt-5 mb-3 text-muted">&copy2021-2022</p>

@@ -5,7 +5,7 @@ import Model.User.Cliente;
 public abstract class Pessoa extends Endereco{
 	private String nome;
 	private String email;
-	private String cpf;
+	private String CPF;
 		
 	public String getNome() {
 		return nome;
@@ -24,7 +24,11 @@ public abstract class Pessoa extends Endereco{
 	}
 	
 	public String getCpf() {
-		return cpf;
+		return CPF;
+	}
+	
+	public void setCpf(String cpf) {
+		this.CPF = cpf;
 	}
 	
 	public Cliente Contato(String telefone, String ContEmergencia) {
