@@ -8,7 +8,13 @@
 		<!-- Formatação bootstrap -->
 		<link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sign-in/">
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-		<link rel="stylesheet" href="~/formataPage/estilo.css" type="text/css">
+		<link rel="stylesheet" href="./formataPage/estilo.css" type="text/css">
+		
+		<script type="text/javascript">
+			function msg(){
+				alert("Ainda em desenvolvimento");
+			}
+		</script>
 </head>
 <body>
 	<%@ include file="ViewsDefault/Cabecalho.jsp"%>
@@ -20,20 +26,20 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item  bg-dark text-white text-center active">
-                <img src="~/img/BaiaAguasDeSentina.jpg" class="d-block w-100" style="opacity: 0.5" alt="AguasDeSentina" />
+                <img src="./img/BaiaAguasDeSentina.jpg" class="d-block w-100" style="opacity: 0.5" alt="AguasDeSentina" />
                 <div class="carousel-caption d-none d-md-block">
                     <h2>Curiosidades</h2>
                     <p>Descubra o que os piratas mais famosos fizeram para ganhar sua fama</p>
-                    <p><a class="btn btn-lg btn-primary" href="#">Click aqui</a></p>
+                    <p><a class="btn btn-lg btn-primary" href="#" onclick="msg()">Click aqui</a></p>
                     <br />
                 </div>
             </div>
             <div class="carousel-item bg-dark text-white text-center">
-                <img src="~/img/MulherPirata (1).jpg" class="d-block w-100" style="opacity: 0.5" alt="Mulher Pirata" />
+                <img src="./img/MulherPirata.jpg" class="d-block w-100" style="opacity: 0.5" alt="Mulher Pirata" />
                 <div class="carousel-caption d-none d-md-block">
                     <h2>Dieu-le-veut</h2>
                     <p>Conheça a história das mulheres piratas mais incríveis que você já viu</p>
-                    <p><a class="btn btn-lg btn-primary" href="#">Click aqui</a></p>
+                    <p><a class="btn btn-lg btn-primary" href="#" onclick="msg()">Click aqui</a></p>
                     <br />
                 </div>
             </div>
@@ -63,7 +69,7 @@
                 <div class="col">
                     <div class="card shadow-sm">
                         <h3 class="text-center fonte">Ching Shih</h3>
-                        <img src="~/img/pirataF.jpg" class="d-block w-100" alt="Mulher Pirata" />
+                        <img src="./img/pirataF.jpg" class="d-block w-100" alt="Mulher Pirata" />
                         <div class="card-body">
                             <p class="card-text">
                                 Pirata nascida em 1705 em Guangdong, trabalhou em um bordel até que recebeu uma proposta
@@ -77,7 +83,7 @@
                 <div class="col">
                     <div class="card shadow-sm">
                         <h3 class="text-center fonte">Anne Dieu-Le-Veut</h3>
-                        <img src="~/img/AnneVeut.jpg" class="d-block w-100" alt="Mulher Pirata" />
+                        <img src="./img/AnneVeut.jpg" class="d-block w-100" alt="Mulher Pirata" />
                         <div class="card-body">
                             <p class="card-text">
                                 Francesa pirata Marie-Anne, foi enviada para Tortuga para casar-se e virar fazendeira,
@@ -91,7 +97,7 @@
                 <div class="col">
                     <div class="card shadow-sm">
                         <h3 class="text-center fonte">Anne Bonny</h3>
-                        <img src="~/img/AnneBonny.png" class="d-block w-100" alt="Mulher Pirata" />
+                        <img src="./img/AnneBonny.png" class="d-block w-100" alt="Mulher Pirata" />
                         <div class="card-body">
                             <p class="card-text">
                                 Na Bahamas conheceu o círculo de piratas e o seu marido John Rackham, o famoso e
@@ -120,7 +126,7 @@
                 <div class="col">
                     <div class="card shadow-sm">
                         <h3 class="text-center fonte">Bebida Milagrosa</h3>
-                        <img src="~/img/BebidaMilagrosa.jpg" class="d-block w-100" alt="A bebida dos piratas" />
+                        <img src="./img/BebidaMilagrosa.jpg" class="d-block w-100" alt="A bebida dos piratas" />
                         <div class="card-body">
                             <p class="card-text">
                                 Carregavam consigo uma bebida inventada pelos britânicos e adaptada pelos
@@ -135,7 +141,7 @@
                 <div class="col">
                     <div class="card shadow-sm">
                         <h3 class="text-center fonte">Andar na prancha</h3>
-                        <img src="~/img/andarNaPrancha.jpg" class="d-block w-100" alt="Andar na prancha" />
+                        <img src="./img/andarNaPrancha.jpg" class="d-block w-100" alt="Andar na prancha" />
                         <div class="card-body">
                             <p class="card-text">
                                 Apesar de ser uma ideia instigante os piratas não faziam tal ato.
@@ -148,7 +154,7 @@
                 <div class="col">
                     <div class="card shadow-sm">
                         <h3 class="text-center fonte">Barba Negra</h3>
-                        <img src="~/img/barbaNegra.jpeg" class="d-block w-100" alt="Barba Negra" />
+                        <img src="./img/barbaNegra.jpeg" class="d-block w-100" alt="Barba Negra" />
                         <div class="card-body">
                             <p class="card-text">
                                 O mais temido dos piratas, Edward Teach, foi a pessoa que ocasionou todo esse esteriótipos

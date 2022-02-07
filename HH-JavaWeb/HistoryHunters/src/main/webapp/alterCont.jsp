@@ -37,7 +37,7 @@
 				<label for="floatingPassword">Senha</label>
 				</div>
 				<div>
-				<a class="btn btn-default" href="ViewsDefault/index.jsp">Cancelar</a>
+				<a class="btn btn-default" href="index.jsp">Cancelar</a>
 				</div>
 				<input class="btn btn-default" type="submit" value="Enviar"/>
 			</form>
